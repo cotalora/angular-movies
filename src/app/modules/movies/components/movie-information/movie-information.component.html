@@ -1,0 +1,10 @@
+<div *ngIf="movie" [@valueChanged]="movie.id" class="movie-information-container">
+    <h2 class="movie-title">{{ movie.title }}</h2>
+    <div class="subinformation-container">
+        <h3 class="movie-clasifications">Genre: <span>{{ movie.genre | joinArrayBy:', ' }}</span></h3>
+        <h4 class="movie-rating">Rating: <span>{{ movie.rating }}</span></h4>
+        <p class="movie-duration">Duration: <span>{{ movie.duration }}</span></p>
+        <p class="movie-released-date">Released date: <span>{{ movie.releasedDate | dateUSFormat }}</span></p>
+    </div>
+    <p class="movie-description">{{ movie.description }}</p>
+</div>

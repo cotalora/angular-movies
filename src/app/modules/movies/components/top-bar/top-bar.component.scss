@@ -1,0 +1,28 @@
+.navbar-container {
+    width: 100%;
+    background: linear-gradient(135deg, rgba(var(--background-color), 1) 0%, rgba(var(--background-color), 0) 100%);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid rgba(95, 95, 95, .5);
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    h1.title {
+        width: 100%;
+
+        a {
+            font-family: var(--principal-font);
+            font-size: 2rem;
+            font-weight: 700;
+            color: rgba(var(--principal-color), 1);
+            text-decoration: none;
+
+            span {
+                font-size: 1.25rem;
+            }
+        }
+    }
+}

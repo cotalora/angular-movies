@@ -1,0 +1,37 @@
+.spinner-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(var(--background-color), 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    span {
+        font-family: var(--principal-font);
+        font-size: 3rem;
+        font-weight: 700;
+        color: rgba(var(--principal-color), 1);
+        animation: wavy infinite 1s ease;
+
+        &:last-child {
+            animation-delay: .25s !important;
+        }
+    }
+}
+
+@keyframes wavy {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}

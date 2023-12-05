@@ -1,0 +1,19 @@
+<div clickOutside (clickOutside)="showWatchList && handleClickOutside()">
+    <button id="show-saved-movies-list" class="saved-movies-list-button" (click)="onClickShowWatchListButton()">
+        <img src="../../../../../assets/images/icons/save-icon.svg" alt="Show saved movies list">
+        <span class="badge" *ngIf="moviesSaved.length > 0">{{ moviesSaved.length }}</span>
+    </button>
+
+    <div *ngIf="showWatchList" [@slideInOut] class="movies-list-container">
+        <h6 class="movies-list-title">Watch List</h6>
+        <ul class="movies-list">
+            <li *ngFor="let movie of moviesSaved" [@slideInOut] class="movie-item">
+                <span class="movie-title">{{ movie.title }}</span>
+                <button id="button-remove-{{ movie.id }}" class="remove-movie-button"
+                    (click)="removeMovieFromWatchList(movie)">
+                    <img src="../../../../../assets/images/icons/remove-icon.svg" alt="Remove movie">
+                </button>
+            </li>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,93 @@
+.saved-movies-list-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    position: relative;
+
+    img {
+        width: 1.875rem;
+        height: 1.875rem;
+    }
+
+    .badge {
+        position: absolute;
+        background: #CC0000;
+        color: #FFFFFF;
+        top: -.25rem;
+        right: -.5rem;
+        border-radius: 100%;
+        width: 1rem;
+        height: 1rem;
+        font-family: var(--principal-font);
+        font-size: .75rem;
+        font-weight: 500;
+    }
+}
+
+.movies-list-container {
+    position: absolute;
+    right: 2.5rem;
+    top: 3rem;
+    background: rgba(var(--background-color), .9);
+    -webkit-box-shadow: -16px 16px 10px -7px rgba(0,0,0,0.1);
+    -moz-box-shadow: -16px 16px 10px -7px rgba(0,0,0,0.1);
+    box-shadow: -16px 16px 10px -7px rgba(0,0,0,0.1);
+
+    .movies-list-title {
+        font-family: var(--principal-font);
+        font-size: 1rem;
+        font-weight: 600;
+        border-bottom: 1px solid rgba(95, 95, 95, .5);
+        padding: 1rem;
+        text-align: center;
+        color: #FFFFFF;
+    }
+
+    .movies-list {
+        padding: 1rem;
+        list-style: none;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+        max-width: 15rem;
+        width: 15rem;
+
+        .movie-item {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            gap: .5rem;
+            padding-bottom: .5rem;
+            border-bottom: 1px solid rgba(95, 95, 95, .5);
+
+            &:last-child {
+                border: none;
+                padding-bottom: 0;
+            }
+
+            .movie-title {
+                font-family: var(--principal-font);
+                font-size: .875rem;
+                font-weight: 400;
+                color: #FFFFFF;
+            }
+    
+            .remove-movie-button {
+                background: none;
+                border: none;
+                cursor: pointer;
+                padding: 0;
+                width: 1.5rem;
+                height: 1.5rem;
+                
+                img {
+                    width: 1.5rem;
+                    height: 1.5rem;
+                }
+            }
+        }
+    }
+}

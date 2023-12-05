@@ -1,0 +1,50 @@
+.movie-information-container {
+    max-width: 45%;
+    height: 20rem;
+    overflow-y: overlay;
+
+    @media screen and (max-width: 900px) {
+        max-width: 100%;
+        height: 16rem;
+
+        .movie-title {
+            font-size: 1.75rem !important;
+        }
+    }
+
+    .movie-title {
+        font-size: 3.75rem;
+        font-family: var(--principal-font);
+        font-weight: 700;
+        color: rgba(var(--principal-color), 1);
+        margin-bottom: .75rem;
+    }
+
+    .subinformation-container {
+        display: flex;
+        flex-direction: column;
+        gap: .25rem;
+
+        .movie-clasifications, .movie-rating, .movie-duration, .movie-released-date {
+            font-size: .875rem;
+            font-family: var(--principal-font);
+            color: rgba(var(--principal-color), 1);
+            font-weight: 600;
+
+            span {
+                font-size: .75rem;
+                font-weight: 400;
+                color: #FFFFFF;
+            }
+        }
+    }
+
+    .movie-description {
+        margin-top: .5rem;
+        font-size: .875rem;
+        font-family: var(--principal-font);
+        color: #FFFFFF;
+        font-weight: 400;
+        text-align: justify;
+    }
+}

@@ -1,0 +1,12 @@
+<div class="movies-container">
+    <swiper-container #swiper swiper [config]="swiperConfig" class="swiper-container">
+        <swiper-slide *ngFor="let movie of movies" class="swiper-slide-container">
+            <div hoverToShowDetails [movie]="movie" class="image-container">
+                <div class="image-tag-container">
+                    <span *ngIf="movie.saved" class="selected-tag">On my watchlist</span>
+                    <img [src]='movie.image' [alt]='movie.title' class="image">
+                </div>
+            </div>
+        </swiper-slide>
+    </swiper-container>
+</div>

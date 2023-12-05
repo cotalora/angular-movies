@@ -1,0 +1,27 @@
+.sort-by-container {
+    padding: 1rem 0;
+
+    .sort-by-select {
+        font-size: .875rem;
+        font-family: var(--principal-font);
+        font-weight: 400;
+        background: rgba(var(--background-color), 1);
+        padding: .25rem;
+        padding-left: 0;
+        color: #FFFFFF;
+        border: none;
+        cursor: pointer;
+
+        option {
+            border: none;
+
+            &:first-child {
+                display: none;
+            }
+        }
+
+        &:focus-visible {
+            outline: none;
+        }
+    }
+}

@@ -1,0 +1,30 @@
+<div *ngIf="movie" class="movie-container">
+    <div class="movie-image-information-container">
+        <img [src]="movie.image" [alt]="movie.title" class="movie-information-image">
+        <div class="movie-information-container">
+            <h2 class="movie-title">{{ movie.title }}</h2>
+            <div class="subinformation-container">
+                <h3 class="movie-clasifications">Genre: <span>{{ movie.genre | joinArrayBy:', ' }}</span></h3>
+                <h4 class="movie-rating">Rating: <span>{{ movie.rating }}</span></h4>
+                <p class="movie-duration">Duration: <span>{{ movie.duration }}</span></p>
+                <p class="movie-released-date">Released date: <span>{{ movie.releasedDate | dateUSFormat }}</span></p>
+                <span *ngIf="movie.saved" class="selected-tag">On my watchlist</span>
+                <button 
+                    id="watchlist-button"
+                    class="watchlist-button"
+                    (click)="addMovieToWatchList()"
+                >{{!movie.saved ? 'Add to' : 'Remove from'}} Watchlist</button>
+            </div>
+        </div>
+    </div>
+    <div class="video-description-container">
+        <p class="movie-description">{{ movie.description }}</p>
+        <iframe 
+            [src]="safeIframeURL"
+            width="100%" height="100%"
+            title="YouTube video player" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            allowfullscreen
+        ></iframe>
+    </div>
+</div>

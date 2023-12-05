@@ -1,0 +1,12 @@
+<div class="sort-by-container">
+    <select 
+        class="sort-by-select" 
+        name="sort-by" 
+        id="sort-by"
+        [ngModel]="filterSelected" 
+        (ngModelChange)="onChange($event)"
+    >
+        <option disabled selected value="">Sort by:</option>
+        <option *ngFor="let filter of filters" [value]="filter.value">{{ filter.name }}</option>
+    </select>
+</div>

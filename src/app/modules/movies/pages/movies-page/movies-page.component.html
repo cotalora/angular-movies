@@ -1,0 +1,9 @@
+<div *ngIf="movies.length > 0" class="main-container">
+    <div [@valueChanged]="movieHoveredImage" [style.backgroundImage]="'url(' + movieHoveredImage + ')'" class="movie-mask"></div>
+    
+    <movies-movie-information />
+
+    <movies-movie-filter (filterBy)="onFilterBy($event)" />
+
+    <movies-movie-carousel [movies]="movies" class="movies-carousel" />
+</div>
